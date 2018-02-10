@@ -1,0 +1,22 @@
+img {
+    display: block;
+    margin: auto;
+    width: 50%;
+    height: 50%;
+}
+
+#jumboScraper {
+    font-family: 'Satisfy', cursive;
+}
+
+body {
+    background-color: red;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+row {
+    max-width: 860px;
+}

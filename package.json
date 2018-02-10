@@ -1,0 +1,23 @@
+{
+  "name": "scraper",
+  "version": "1.0.0",
+  "description": "reddit scraper",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tmbarlow/Scraper.git"
+  },
+  "author": "tyler barlow",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tmbarlow/Scraper/issues"
+  },
+  "homepage": "https://github.com/tmbarlow/Scraper#readme",
+  "dependencies": {
+    "package-json": "^4.0.1"
+  }
+}

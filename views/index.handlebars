@@ -1,0 +1,56 @@
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" >the ONION Scraper</a>
+                </div>
+            
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                    <li class="active"><a href="/">Home <span class="sr-only">(current)</span></a></li>
+                    <li><a href="/savedarticles">Saved Articles</a></li>
+                    </ul>
+                    <form action="/scrape" method="POST" class="navbar-form navbar-left">
+                    <button type="submit" class="btn btn-success">Scrape the ONION!</button>
+                    </form>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+          <!--End navigation-->
+          
+          <!-- Main container -->
+          <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="jumbotron">
+                                {{!--i coulded get the image mapping done correctly so just copied the image link --}}
+                                <img src="/images/the-onion-logo.png" 
+                                
+                                alt="The ONION" style="display:block;margin:auto;" height="50%">
+                                <h1 id="jumboScraper" style="text-align:center;">Scraper</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        {{#each articles}}
+                            <div class="panel panel-success">
+                                    <div class="panel-heading ">
+                                        <h3 class="panel-title ">{{this.title}}</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        <p>{{this.link}}</p>
+                                    </div>
+                                    <div class="panel-footer">
+                                        <form action="/save" method="POST">
+                                        <input id="article-title" type="hidden" name="title" value="{{this.title}}">
+                                        <input id="article-link" type="hidden" name="link" value={{this.link}}>
+                                        <button type="submit" class="btn btn-default ">SAVE ARTICLE</button>
+                                        </form>
+                                    </div>
+                            </div>
+                        {{/each}}
+                    </div>
+                </div>
+              </div>
